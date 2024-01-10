@@ -142,3 +142,26 @@ function getBooks() {
 function getBook(id) {
   return data.find((d) => d.id === id);
 }
+
+// My notes and code to refresh JS knowledge
+
+// Destructuring objects and arrays
+const book = getBook(2);
+// const title = book.title;
+// const author = book.author;
+
+const { title, author, pages, publicationDate, genres } = book; // To improve readability we can extract two values at the same time
+
+console.log(title, author, pages, publicationDate, genres);
+
+// const primaryGenre = genres[0];
+// const secondaryGenre = genres[1];
+
+const [primaryGenre, secondaryGenre] = genres;
+
+console.log(primaryGenre, secondaryGenre);
+
+// REST / SPREAD OPERATOR
+// This are ... that spreads data
+
+// const [primaryGenre, secondaryGenre, ...other] = genres;
